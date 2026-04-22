@@ -15,17 +15,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name= "jugadores")
-public class Jugador {
-    //ATRIBUTOS
+@Table(name= "Equipos")
+public class Equipo {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idJugador;
-    @NotBlank
-    private String rol; //Armador/Central/Punta (L/C)/Opuesto/Libero(?)
-    @NotNull
-    private int posicion; // Posición en cancha (1,2,3,4,5,6)
+    private Id idEquipo;
 
+    @NotBlank
+    private String nombreEquipo;
+
+    @NotNull
+    private boolean duenoPunto;
 
 
 }
