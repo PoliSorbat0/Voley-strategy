@@ -1,8 +1,6 @@
 package com.duoc.Voley_Strategy.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -15,19 +13,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name= "jugadores")
-public class Jugador {
-    //ATRIBUTOS
+@Table( name = "Estrategias")
+public class Estrategia {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idJugador;
-
-    @NotBlank
-    private String rol; //Armador/Central/Punta (L/C)/Opuesto/Libero(?)
-    
     @NotNull
-    private Integer posicion; // Posición en cancha (1,2,3,4,5,6)
+    private int idEstrategia;
+    
+    @NotBlank
+    private String nombreEstrategia;
 
-
-
+    
+    
 }

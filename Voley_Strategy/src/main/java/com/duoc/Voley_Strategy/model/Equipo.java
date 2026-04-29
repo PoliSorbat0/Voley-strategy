@@ -20,7 +20,7 @@ public class Equipo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Id idEquipo;
+    private Integer idEquipo;
 
     @NotBlank
     private String nombreEquipo;
