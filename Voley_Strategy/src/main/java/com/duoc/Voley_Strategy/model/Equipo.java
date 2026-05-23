@@ -41,7 +41,6 @@ public class Equipo {
     @NotBlank
     private String fechaFundacion;
 
-    @NotNull
     private boolean duenoPunto;
 
     

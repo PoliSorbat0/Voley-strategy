@@ -1,0 +1,300 @@
+{
+  "info": {
+    "_postman_id": "451c738c-216b-4341-9a1c-467cb259a6ef",
+    "name": "Voley-Strategy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55133480"
+  },
+  "item": [
+    {
+      "name": "Jugadores",
+      "item": [
+        {
+          "name": "Listar Jugadores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/jugadores",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "jugadores"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Jugadores en Cancha (DTO)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/jugadores/en-cancha",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "jugadores", "en-cancha"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Jugador",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombre\": \"Rodrigo\",\n  \"apellido\": \"Osses\",\n  \"altura\": 188,\n  \"anosJugando\": 5,\n  \"marcaZapatillas\": \"Asics\",\n  \"colorZapatillas\": \"Azul/Blanco\",\n  \"rol\": \"Armador\",\n  \"posicion\": 1,\n  \"equipo\": {\n    \"idEquipo\": 1,\n    \"duenoPunto\": true\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/jugadores",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "jugadores"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Jugador",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/jugadores/3",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "jugadores", "3"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cambiar Nombre Jugador",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/jugadores/3?nuevoNombre=Rodrigo",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "jugadores", "3"],
+              "query": [
+                {
+                  "key": "nuevoNombre",
+                  "value": "Rodrigo"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Equipos",
+      "item": [
+        {
+          "name": "Listar Equipos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/equipos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "equipos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Equipos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombreEquipo\": \"Rayo Voley Club\",\n  \"colorPrimario\": \"Azul\",\n  \"colorSecundario\": \"Amarillo\",\n  \"fechaFundacion\": \"2020-03-15\",\n  \"duenoPunto\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/equipos",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "equipos"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cambiar Nombre del Equipo",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/equipos/1?nuevoNombre=Rayo Voley Club Actualizado",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "equipos", "1"],
+              "query": [
+                {
+                  "key": "nuevoNombre",
+                  "value": "Rayo Voley Club Actualizado"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Equipo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/equipos/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "equipos", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Estrategia",
+      "item": [
+        {
+          "name": "Listar Estrategias",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/estrategias",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "estrategias"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Crear Estrategia",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nombreEstrategia\": \"4-2\",\n  \"descripcionEstrategia\": \"Formación con 2 armadores y 4 atacantes\",\n  \"equipo\": {\n    \"idEquipo\": 1,\n    \"duenoPunto\": true\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/estrategias",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "estrategias"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cambiar nombre Estrategia",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/estrategias/2?nuevoNombre=4-2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "estrategias", "2"],
+              "query": [
+                {
+                  "key": "nuevoNombre",
+                  "value": "4-2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar Estrategia",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/estrategias/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "estrategias", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Clima",
+      "item": [
+        {
+          "name": "Obtener datos del clima",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/clima",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "clima"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
