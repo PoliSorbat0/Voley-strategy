@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 public interface JugadorRepository extends JpaRepository<Jugador, Integer> {
+
+    
     //Rol
     List<Jugador> findByRol(String rol);
 

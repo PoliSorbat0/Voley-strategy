@@ -25,6 +25,11 @@ public class EquipoService {
                 .orElseThrow(() -> new RuntimeException("Equipo no encontrado con ID: " + id));
     }
 
+    public void eliminarEquipo(Integer id) {
+        Equipo equipo = seleccionarEquipo(id);
+        equipoRepository.delete(equipo);
+    }
+
     public void modificarNombre(Integer id, String nuevoNombre) {
         Equipo equipo = seleccionarEquipo(id);
         equipo.setNombreEquipo(nuevoNombre);

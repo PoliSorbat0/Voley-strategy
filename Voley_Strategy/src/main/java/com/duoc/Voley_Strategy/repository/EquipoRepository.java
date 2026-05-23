@@ -22,6 +22,10 @@ public interface EquipoRepository extends JpaRepository<Equipo, Integer> {
     // Buscar por nombre 
     List<Equipo> findByNombreEquipo(String nombreEquipo);
 
-    // Identificar al dueño del punto
-    List<Equipo> findByDuenoPunto(boolean duenoPunto);
+    // Buscar los colores de un equipo por su nombre
+    @Query("SELECT e.colorPrimario, e.colorSecundario FROM Equipo e WHERE e.nombreEquipo = :nombre")
+    List<Object[]> findColoresByNombreEquipo(@Param("nombre") String nombreEquipo);
+    
+    // CORRECCIÓN: Cambiar boolean por Boolean
+    List<Equipo> findByDuenoPunto(Boolean duenoPunto);
 }

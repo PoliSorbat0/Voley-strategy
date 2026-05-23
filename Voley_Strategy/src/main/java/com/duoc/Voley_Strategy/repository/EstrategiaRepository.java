@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface EstrategiaRepository extends JpaRepository<Estrategia, Integer> {
     List<Estrategia> findByNombreEstrategia(String nombreEstrategia);
+
+
 }
