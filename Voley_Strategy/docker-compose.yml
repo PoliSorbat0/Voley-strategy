@@ -1,10 +1,10 @@
 services:
   mysql:
     image: mysql:8.4
-    container_name: Voley_Strategy-mysql
+    container_name: Voley-strategy-mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: Voley_strategy
+      MYSQL_DATABASE: voley_strategy
     ports:
       - "3307:3306"
     volumes:
@@ -19,17 +19,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: Voley_strategy-app
+    container_name: Voley-strategy-app
     depends_on:
       mysql:
         condition: service_healthy
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/bibliotecaduoc?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/voley_strategy?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: root
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
       SPRING_JPA_SHOW_SQL: "true"
-      JWT_SECRET: bibliotecaduoc-clave-secreta-jwt-2026-cambiar-en-produccion
+      JWT_SECRET: Voley-strategy-clave-secreta-jwt-2026-cambiar-en-produccion
     ports:
       - "8080:8080"
     restart: unless-stopped
