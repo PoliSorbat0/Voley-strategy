@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class JugadorCanchaDTO {
+    public JugadorCanchaDTO(Object rol2, Object posicion2) {
+        //TODO Auto-generated constructor stub
+    }
+
     //Rol del jugador
     private String rol; //Armador/Central/Punta (L/C)/Opuesto/Libero(?)
     

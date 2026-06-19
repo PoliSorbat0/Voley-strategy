@@ -1,5 +1,6 @@
 package com.duoc.Voley_Strategy.controller;
 
+import com.duoc.Voley_Strategy.DTO.JugadorCanchaDTO;
 import com.duoc.Voley_Strategy.model.Jugador;
 import com.duoc.Voley_Strategy.service.JugadorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -63,5 +64,18 @@ public class JugadorController {
         return ResponseEntity.ok("Nombre actualizado correctamente a: " + nuevoNombre);
     }
     //Llamar al jugador en cancha (Jugador DTO)
+    @GetMapping("/{id}/en-cancha")
+    public ResponseEntity<JugadorCanchaDTO> obtenerJugadorEnCancha(@PathVariable Integer id) {
+        Jugador jugador = jugadorService.seleccionarJugador(id);
+        if (jugador == null) {
+            throw new NoSuchElementException("No se encontró el jugador con el ID: " + id);
+        }
+        
+  
+        JugadorCanchaDTO dto = new JugadorCanchaDTO(jugador.getPosicion(), 1); 
+        
+        return ResponseEntity.ok(dto);
+    }
+
     
 }
