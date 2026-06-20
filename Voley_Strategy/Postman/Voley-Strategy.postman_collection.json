@@ -3,7 +3,8 @@
     "_postman_id": "451c738c-216b-4341-9a1c-467cb259a6ef",
     "name": "Voley-Strategy",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "55133480"
+    "_exporter_id": "55133480",
+    "_collection_link": "https://go.postman.co/collection/55133480-451c738c-216b-4341-9a1c-467cb259a6ef?source=collection_link"
   },
   "item": [
     {
@@ -15,26 +16,23 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:8080/api/jugadores",
+              "raw": "http://localhost:8080/api/jugadores?",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8080",
-              "path": ["api", "jugadores"]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Listar Jugadores en Cancha (DTO)",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/jugadores/en-cancha",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["api", "jugadores", "en-cancha"]
+              "path": [
+                "api",
+                "jugadores"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "type": "text"
+                }
+              ]
             }
           },
           "response": []
@@ -43,15 +41,10 @@
           "name": "Crear Jugador",
           "request": {
             "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
+            "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"nombre\": \"Rodrigo\",\n  \"apellido\": \"Osses\",\n  \"altura\": 188,\n  \"anosJugando\": 5,\n  \"marcaZapatillas\": \"Asics\",\n  \"colorZapatillas\": \"Azul/Blanco\",\n  \"rol\": \"Armador\",\n  \"posicion\": 1,\n  \"equipo\": {\n    \"idEquipo\": 1,\n    \"duenoPunto\": true\n  }\n}",
+              "raw": "{\r\n    \"nombre\": \"Rodrigo\",\r\n    \"apellido\": \"Osses\",\r\n    \"altura\": 185,\r\n    \"anosJugando\": 4,\r\n    \"marcaZapatillas\": \"Asics\",\r\n    \"colorZapatillas\": \"Azul/Blanco\",\r\n    \"rol\": \"Central\",\r\n    \"posicion\": 3,\r\n    \"equipo\": {\r\n        \"idEquipo\": 1,\r\n        \"duenoPunto\": false\r\n    }\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -61,24 +54,35 @@
             "url": {
               "raw": "http://localhost:8080/api/jugadores",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8080",
-              "path": ["api", "jugadores"]
+              "path": [
+                "api",
+                "jugadores"
+              ]
             }
           },
           "response": []
         },
         {
-          "name": "Eliminar Jugador",
+          "name": "Eliminar Jugadores",
           "request": {
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:8080/api/jugadores/3",
+              "raw": "http://localhost:8080/api/jugadores/2",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8080",
-              "path": ["api", "jugadores", "3"]
+              "path": [
+                "api",
+                "jugadores",
+                "2"
+              ]
             }
           },
           "response": []
@@ -89,15 +93,21 @@
             "method": "PUT",
             "header": [],
             "url": {
-              "raw": "http://localhost:8080/api/jugadores/3?nuevoNombre=Rodrigo",
+              "raw": "http://localhost:8080/api/jugadores/3?nuevoNombre=Rodrigo Osses",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8080",
-              "path": ["api", "jugadores", "3"],
+              "path": [
+                "api",
+                "jugadores",
+                "3"
+              ],
               "query": [
                 {
                   "key": "nuevoNombre",
-                  "value": "Rodrigo"
+                  "value": "Rodrigo Osses"
                 }
               ]
             }
@@ -110,33 +120,13 @@
       "name": "Equipos",
       "item": [
         {
-          "name": "Listar Equipos",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/equipos",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["api", "equipos"]
-            }
-          },
-          "response": []
-        },
-        {
           "name": "Crear Equipos",
           "request": {
             "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
+            "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"nombreEquipo\": \"Rayo Voley Club\",\n  \"colorPrimario\": \"Azul\",\n  \"colorSecundario\": \"Amarillo\",\n  \"fechaFundacion\": \"2020-03-15\",\n  \"duenoPunto\": true\n}",
+              "raw": "{\r\n    \"nombreEquipo\": \"Aguilas\",\r\n    \"colorPrimario\": \"Azul\",\r\n    \"colorSecundario\": \"Amarillo\",\r\n    \"duenoPunto\": false,\r\n    \"fechaFundacion\": \"2026-05-22\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -146,29 +136,13 @@
             "url": {
               "raw": "http://localhost:8080/api/equipos",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8080",
-              "path": ["api", "equipos"]
-            }
-          },
-          "response": []
-        },
-        {
-          "name": "Cambiar Nombre del Equipo",
-          "request": {
-            "method": "PUT",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/equipos/1?nuevoNombre=Rayo Voley Club Actualizado",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["api", "equipos", "1"],
-              "query": [
-                {
-                  "key": "nuevoNombre",
-                  "value": "Rayo Voley Club Actualizado"
-                }
+              "path": [
+                "api",
+                "equipos"
               ]
             }
           },
@@ -182,9 +156,71 @@
             "url": {
               "raw": "http://localhost:8080/api/equipos/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8080",
-              "path": ["api", "equipos", "1"]
+              "path": [
+                "api",
+                "equipos",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Equipos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/equipos",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "equipos"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cambiar Nombre del Equipo",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/equipos/x?nuevoNombre=\"Nuevo nombre aquí\"",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "equipos",
+                "x"
+              ],
+              "query": [
+                {
+                  "key": "nuevoNombre",
+                  "value": "\"Nuevo nombre aquí\""
+                }
+              ]
             }
           },
           "response": []
@@ -195,33 +231,13 @@
       "name": "Estrategia",
       "item": [
         {
-          "name": "Listar Estrategias",
-          "request": {
-            "method": "GET",
-            "header": [],
-            "url": {
-              "raw": "http://localhost:8080/api/estrategias",
-              "protocol": "http",
-              "host": ["localhost"],
-              "port": "8080",
-              "path": ["api", "estrategias"]
-            }
-          },
-          "response": []
-        },
-        {
           "name": "Crear Estrategia",
           "request": {
             "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
+            "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"nombreEstrategia\": \"4-2\",\n  \"descripcionEstrategia\": \"Formación con 2 armadores y 4 atacantes\",\n  \"equipo\": {\n    \"idEquipo\": 1,\n    \"duenoPunto\": true\n  }\n}",
+              "raw": "{\r\n    \"nombreEstrategia\": \"Ataque 5-1 Cruzado\",\r\n    \"descripcionEstrategia\": \"Formación ofensiva estándar\",\r\n    \"equipo\": {\r\n        \"idEquipo\": 1,\r\n        \"duenoPunto\": false\r\n    }\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -231,9 +247,34 @@
             "url": {
               "raw": "http://localhost:8080/api/estrategias",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8080",
-              "path": ["api", "estrategias"]
+              "path": [
+                "api",
+                "estrategias"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Listar Estrategias",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/estrategias",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "estrategias"
+              ]
             }
           },
           "response": []
@@ -246,9 +287,15 @@
             "url": {
               "raw": "http://localhost:8080/api/estrategias/2?nuevoNombre=4-2",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8080",
-              "path": ["api", "estrategias", "2"],
+              "path": [
+                "api",
+                "estrategias",
+                "2"
+              ],
               "query": [
                 {
                   "key": "nuevoNombre",
@@ -265,11 +312,17 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:8080/api/estrategias/1",
+              "raw": "http://localhost:8080/api/estrategias/2",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8080",
-              "path": ["api", "estrategias", "1"]
+              "path": [
+                "api",
+                "estrategias",
+                "2"
+              ]
             }
           },
           "response": []
@@ -287,9 +340,76 @@
             "url": {
               "raw": "http://localhost:8080/api/clima",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8080",
-              "path": ["api", "clima"]
+              "path": [
+                "api",
+                "clima"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Login Usuario",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Registrar Usuario",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"123\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/auth/register",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v1",
+                "auth",
+                "register"
+              ]
             }
           },
           "response": []
